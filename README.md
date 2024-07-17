@@ -7,7 +7,7 @@ This project implements a 4-bit High Speed Carry Look Ahead Adder and Subtractor
 - **carry_look_ahead_adder_subtractor.v**: Design file for the carry lookahead adder and subtractor.
 - **tb_carry_look_ahead_adder_subtractor.v**: Testbench file for simulating and verifying the design.
 
-The project leverages propagation and generation bits where P = A⊕B and G = A.B. This approach ensures high-speed arithmetic operations by reducing the carry propagation delay.
+The project leverages propagation and generation bits where P = A⊕B and G = A•B. This approach ensures high-speed arithmetic operations by reducing the carry propagation delay.
 
 ## Why It Is Fast
 
