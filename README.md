@@ -24,6 +24,9 @@ By using these signals, the CLA can determine the carry for each bit in parallel
 - **Design File**: The carry_look_ahead_adder_subtractor.v file contains the Verilog code for the carry lookahead adder and subtractor.
 - **Testbench File**: The tb_carry_look_ahead_adder_subtractor.v file includes the testbench code to simulate and verify the functionality of the design.
 
+## Output
+![carry look ahead adder  subtractor](https://github.com/user-attachments/assets/35a3482a-0c4e-4c40-9f99-3ffba0c620f8)
+
 ## Research Paper
 
 This project is based on the research paper titled "High Speed Carry Look Ahead Adder and Subtractor using Xilinx ISE" by K. Abdul Munaf, Kurumala Vishnu Chaithanya, and Athikari Harinath. Special thanks to the authors for their valuable insights and contributions to this topic.
