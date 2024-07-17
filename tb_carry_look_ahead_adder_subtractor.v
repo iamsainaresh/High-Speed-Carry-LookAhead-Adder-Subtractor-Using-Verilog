@@ -28,10 +28,10 @@ module tb_carry_look_ahead_adder_subtractor();
         #10 A = 4'b1111; B = 4'b0001; Cin = 1'b1; control = 1'b0; // 15 + 1 + 1
 
         // Test subtraction
-        #10 A = 4'b1010; B = 4'b1010; Cin = 1'b1; control = 1'b1; // 10 - 3
-        #10 A = 4'b0000; B = 4'b0000; Cin = 1'b1; control = 1'b1; // 12 - 6
+        #10 A = 4'b0110; B = 4'b1100; Cin = 1'b1; control = 1'b1; // 6 - 12
+        #10 A = 4'b1100; B = 4'b0110; Cin = 1'b1; control = 1'b1; // 12 - 6
 
         // End simulation
-        #50 $stop;
+        #10 $stop;
     end
 endmodule
