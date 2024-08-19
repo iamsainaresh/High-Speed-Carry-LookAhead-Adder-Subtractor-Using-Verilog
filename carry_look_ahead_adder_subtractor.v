@@ -3,7 +3,7 @@ module carry_look_ahead_adder_subtractor(
     input [3:0] A,        // 4-bit input A
     input [3:0] B,        // 4-bit input B
     input Cin,            // Carry input
-    input control,        // Control signal: 0 for addition, 1 for subtraction
+    //input control,        // Control signal: 0 for addition, 1 for subtraction
     output [3:0] sum,     // 4-bit sum output
     output Cout           // Carry/Borrow output
     );
@@ -14,7 +14,7 @@ module carry_look_ahead_adder_subtractor(
     wire [3:0] B_xor;     // B after XOR with add_sub
     
     // XOR b with add_sub control signal to get two's complement for subtraction
-    assign B_xor = B ^ {4{control}};
+    assign B_xor = B ^ {4{Cin}};
     
     // Propagate signals
     assign P[0] = A[0] ^ B_xor[0];
@@ -29,7 +29,7 @@ module carry_look_ahead_adder_subtractor(
     assign G[3] = A[3] & B_xor[3];
     
     // Carry signals
-    assign C[0] = Cin;
+    assign C[0] = G[0];
     assign C[1] = G[0] | (P[0] & C[0]);
     assign C[2] = G[1] | (P[1] & G[0]) | (P[1] & P[0] & C[0]);
     assign C[3] = G[2] | (P[2] & G[1]) | (P[2] & P[1] & G[0]) | (P[2] & P[1] & P[0] & C[0]);
